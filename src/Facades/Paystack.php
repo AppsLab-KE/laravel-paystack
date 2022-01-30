@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Unicodeveloper\Paystack\Facades;
+namespace Paystack\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
@@ -21,6 +21,6 @@ class Paystack extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'laravel-paystack';
+        return 'paystack';
     }
 }

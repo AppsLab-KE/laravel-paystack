@@ -9,12 +9,12 @@
  * file that was distributed with this source code.
  */
 
-namespace Unicodeveloper\Paystack;
+namespace Paystack;
 
 use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Config;
-use Unicodeveloper\Paystack\Exceptions\IsNullException;
-use Unicodeveloper\Paystack\Exceptions\PaymentVerificationFailedException;
+use Paystack\Exceptions\IsNullException;
+use Paystack\Exceptions\PaymentVerificationFailedException;
 
 class Paystack
 {
@@ -278,6 +278,18 @@ class Paystack
         } else {
             throw new PaymentVerificationFailedException("Invalid Transaction Reference");
         }
+    }
+
+
+    public function getSingleTransaction(string $transactionId): array
+    {
+        return $this->setHttpResponse('/transaction/' . $transactionId, 'get')->getData();
+    }
+
+    public function chargeAuthorization(array $data): array
+    {
+        $res = $this->setHttpResponse('/transaction/charge_authorization', 'post', $data)->getData();
+        return $res;
     }
 
     /**

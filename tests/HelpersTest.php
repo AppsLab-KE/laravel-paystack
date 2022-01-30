@@ -1,6 +1,6 @@
 <?php
 
-namespace Unicodeveloper\Paystack\Test;
+namespace Paystack\Test;
 
 use Mockery as m;
 use PHPUnit\Framework\TestCase;

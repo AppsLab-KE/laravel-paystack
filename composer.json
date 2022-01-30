@@ -1,5 +1,5 @@
 {
-  "name": "unicodeveloper/laravel-paystack",
+  "name": "appslab-ke/paystack-laravel",
   "description": "A Laravel Package for Paystack",
   "keywords": [
     "php",
@@ -23,6 +23,10 @@
     {
       "name": "iamfunsho",
       "email": "info@devfunsho.com"
+    },
+    {
+      "name": "marvin collins",
+      "email": "marvin@appslab.co.ke"
     }
   ],
   "minimum-stability": "stable",
@@ -42,12 +46,12 @@
       "src/Support/helpers.php"
     ],
     "psr-4": {
-      "Unicodeveloper\\Paystack\\": "src/"
+      "Paystack\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "Unicodeveloper\\Paystack\\Test\\": "tests"
+      "Paystack\\Test\\": "tests"
     }
   },
   "scripts": {
@@ -56,10 +60,10 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Unicodeveloper\\Paystack\\PaystackServiceProvider"
+        "Paystack\\PaystackServiceProvider"
       ],
       "aliases": {
-        "Paystack": "Unicodeveloper\\Paystack\\Facades\\Paystack"
+        "Paystack": "Paystack\\Facades\\Paystack"
       }
     }
   }

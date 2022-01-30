@@ -9,7 +9,7 @@
  * file that was distributed with this source code.
  */
 
-namespace Unicodeveloper\Paystack;
+namespace Paystack;
 
 use Illuminate\Support\ServiceProvider;
 
@@ -40,7 +40,7 @@ class PaystackServiceProvider extends ServiceProvider
     */
     public function register()
     {
-        $this->app->bind('laravel-paystack', function () {
+        $this->app->bind('paystack', function () {
 
             return new Paystack;
 
@@ -53,6 +53,6 @@ class PaystackServiceProvider extends ServiceProvider
     */
     public function provides()
     {
-        return ['laravel-paystack'];
+        return ['paystack'];
     }
 }
